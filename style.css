@@ -238,7 +238,7 @@ nav.scrolled {
   justify-content: center;
   /* background: var(--white); */
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)) ,url("Assets/bg.avif");
-  background-size: cover;
+  background-size: 100%;
 }
 .hero-canvas {
   position: absolute;
@@ -1194,7 +1194,12 @@ nav.scrolled {
   display: block;
   margin-bottom: 4px;
 }
-.contact-item-text span, a {
+.contact-item-text span {
+  font-size: 0.95rem;
+  color: var(--dark);
+  line-height: 1.5;
+}
+.contact-item-text a{
   font-size: 0.95rem;
   color: var(--dark);
   line-height: 1.5;
