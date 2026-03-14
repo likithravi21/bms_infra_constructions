@@ -236,7 +236,9 @@ nav.scrolled {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--white);
+  /* background: var(--white); */
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)) ,url("Assets/bg.avif");
+  background-size: cover;
 }
 .hero-canvas {
   position: absolute;
@@ -253,6 +255,7 @@ nav.scrolled {
   opacity: 0.06;
 }
 .hero-content {
+
   position: relative;
   z-index: 10;
   text-align: center;
@@ -310,12 +313,12 @@ nav.scrolled {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 700;
   letter-spacing: 10px;
-  color: var(--mid);
+  color: rgb(41, 41, 41);
   margin-top: 8px;
 }
 .hero-desc {
   font-size: 1.05rem;
-  color: var(--mid);
+  color: black;
   max-width: 540px;
   margin: 0 auto 40px;
   line-height: 1.8;
@@ -366,24 +369,6 @@ nav.scrolled {
   transform: translateY(-3px);
 }
 
-.hero-scroll {
-  position: absolute;
-  bottom: 36px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  animation: fadeInUp 1s ease 1.4s both;
-}
-.hero-scroll span {
-  font-size: 0.65rem;
-  letter-spacing: 4px;
-  color: var(--mid);
-  text-transform: uppercase;
-}
 .scroll-line {
   width: 1px;
   height: 50px;
@@ -1209,10 +1194,11 @@ nav.scrolled {
   display: block;
   margin-bottom: 4px;
 }
-.contact-item-text span {
+.contact-item-text span, a {
   font-size: 0.95rem;
   color: var(--dark);
   line-height: 1.5;
+  text-decoration: none;
 }
 
 .contact-form {
