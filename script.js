@@ -94,7 +94,7 @@ setInterval(() => {
 
 // ===== FORM SUBMIT =====
 (function () {
-  emailjs.init("8ubgE8b4ov9ekYiIC");
+    emailjs.init("8ubgE8b4ov9ekYiIC");
 })();
 // function handleSubmit() {
 //     const btn = document.querySelector('.btn-submit');
@@ -108,33 +108,38 @@ setInterval(() => {
 
 function handleSubmit() {
 
-  const formData = {
-    first_name: document.getElementById("firstName").value,
-    last_name: document.getElementById("lastName").value,
-    email: document.getElementById("email").value,
-    phone: document.getElementById("phone").value,
-    project_type: document.getElementById("projectType").value,
-    message: document.getElementById("message").value
-  };
-//   console.log(formData)
+    const formData = {
+        first_name: document.getElementById("firstName").value,
+        last_name: document.getElementById("lastName").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        project_type: document.getElementById("projectType").value,
+        message: document.getElementById("message").value
+    };
+    //   console.log(formData)
+    if (!formData.first_name || !formData.last_name || !formData.email || !formData.phone || !formData.project_type || !formData.message) {
+        alert("Please fill all the fields")
+    }
+        else {
 
-  emailjs.send(
-    "service_3f17zxu",   // your service id
-    "template_9lql3w9",  // your template id
-    formData
-  )
-  .then(function () {
-    alert("Enquiry sent successfully!");
-    document.getElementById("firstName").value = "";
-    document.getElementById("lastName").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("phone").value = "";
-    document.getElementById("projectType").value = "";
-    document.getElementById("message").value = "";
-  })
-//   .catch(function (error) {
-//     console.log("FAILED", error);
-//   });
+        emailjs.send(
+            "service_3f17zxu",   // your service id
+            "template_9lql3w9",  // your template id
+            formData
+        )
+            .then(function () {
+                alert("Enquiry sent successfully!");
+                document.getElementById("firstName").value = "";
+                document.getElementById("lastName").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("phone").value = "";
+                document.getElementById("projectType").value = "";
+                document.getElementById("message").value = "";
+            })
+    }
+    //   .catch(function (error) {
+    //     console.log("FAILED", error);
+    //   });
 
 }
 
