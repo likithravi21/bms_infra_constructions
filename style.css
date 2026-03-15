@@ -237,7 +237,7 @@ nav.scrolled {
   align-items: center;
   justify-content: center;
   /* background: var(--white); */
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)) ,url("Assets/bg.avif");
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)) ,url("Assets/bg.avif");
   background-size: cover;
 }
 .hero-canvas {
